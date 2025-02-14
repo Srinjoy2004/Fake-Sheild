@@ -75,14 +75,7 @@
     </section>
 
     <!-- 📩 Footer -->
-    <footer>
-        <p>&copy; 2025 DeepFake Detector | Built for Awareness</p>
-        <ul class="social-links">
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">GitHub</a></li>
-        </ul>
-    </footer>
+  
 
     <!-- 🔒 Sign In Modal -->
     <div id="signInModal" class="modal">
@@ -106,6 +99,40 @@
             <button>Login</button>
         </div>
     </div>
+
+    <section id="contact" style="background: #181818; padding: 50px; border-radius: 10px; margin: 40px auto; width: 50%; box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); text-align: left;">
+        <h2 style="color: #03dac6; margin-bottom: 20px; font-size: 24px;">Contact Us</h2>
+        <form id="contactForm" style="display: flex; flex-direction: column; gap: 15px; text-align: left;">
+            <label for="name" style="color: #e0e0e0; text-align: left;">Name:</label>
+            <input type="text" id="name" name="name" required 
+                style="width: 100%; padding: 12px; background: #252525; border: 2px solid #03dac6; color: #e0e0e0; border-radius: 5px; font-size: 16px;">
+            
+            <label for="email" style="color: #e0e0e0; text-align: left;">Email:</label>
+            <input type="email" id="email" name="email" required 
+                style="width: 100%; padding: 12px; background: #252525; border: 2px solid #03dac6; color: #e0e0e0; border-radius: 5px; font-size: 16px;">
+            
+            <label for="message" style="color: #e0e0e0; text-align: left;">Message:</label>
+            <textarea id="message" name="message" rows="4" required 
+                style="width: 100%; padding: 12px; background: #252525; border: 2px solid #03dac6; color: #e0e0e0; border-radius: 5px; font-size: 16px; resize: none;"></textarea>
+    
+            <button type="submit" 
+                style="background: #ff0266; color: white; border: none; padding: 12px; font-size: 18px; border-radius: 6px; cursor: pointer; transition: 0.3s; text-align: center;"
+                onmouseover="this.style.background='#d40052'" 
+                onmouseout="this.style.background='#ff0266'">
+                Send Message
+            </button>
+        </form>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2025 DeepFake Detector | Built for Awareness</p>
+        <ul class="social-links">
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">GitHub</a></li>
+        </ul>
+    </footer>
 
     <script src="script.js"></script>
 

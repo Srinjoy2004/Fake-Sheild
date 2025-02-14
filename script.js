@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const dropArea = document.getElementById("upload-area");
     const fileInput = document.getElementById("file-input");
     const previewImage = document.getElementById("image-preview");
-    
+
     // 📌 Click to Upload
     dropArea.addEventListener("click", () => fileInput.click());
-    
+
     // 📤 File Input Change
     fileInput.addEventListener("change", (event) => {
         const file = event.target.files[0];
@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 });
+
 document.addEventListener("DOMContentLoaded", () => {
     const signInBtn = document.getElementById("signInBtn");
     const loginBtn = document.getElementById("loginBtn");
@@ -53,25 +54,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeSignIn = document.getElementById("closeSignIn");
     const closeLogin = document.getElementById("closeLogin");
 
-    // Open Modals
+    // Open Sign-In Modal & Close Login Modal (if open)
     signInBtn.addEventListener("click", () => {
         signInModal.style.display = "block";
+        loginModal.style.display = "none"; // Close login modal if open
     });
 
+    // Open Login Modal & Close Sign-In Modal (if open)
     loginBtn.addEventListener("click", () => {
         loginModal.style.display = "block";
+        signInModal.style.display = "none"; // Close sign-in modal if open
     });
 
-    // Close Modals
+    // Close Sign-In Modal
     closeSignIn.addEventListener("click", () => {
         signInModal.style.display = "none";
     });
 
+    // Close Login Modal
     closeLogin.addEventListener("click", () => {
         loginModal.style.display = "none";
     });
 
-    // Close if clicking outside modal
+    // Close modals when clicking outside them
     window.addEventListener("click", (event) => {
         if (event.target === signInModal) {
             signInModal.style.display = "none";
