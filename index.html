@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Image Detector</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+
+    <!-- 🌟 Navbar -->
+    <nav>
+        <div class="logo">DeepFake Detector</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <button id="signInBtn">Sign In</button>
+            <button id="loginBtn">Login</button>
+        </div>
+    </nav>
+
+    <!-- 🎯 Hero Section -->
+    <!-- <header id="home">
+        <h1>Spot the Fake with AI!</h1>
+        <p>Upload an image and let our AI detect whether it’s real or fake.</p>
+        <button class="upload-btn">Upload Image</button>
+    </header> -->
+
+    <!-- 📤 Upload Section -->
+    <section class="upload-section">
+        <div class="upload-box">
+            <input type="file" id="imageUpload" accept="image/*">
+            <label for="imageUpload" class="upload-area">Drag & Drop or Click to Upload</label>
+            <img id="previewImage" src="" alt="Preview" class="image-preview">
+            <button class="detect-btn">Detect</button>
+        </div>
+    </section>
+
+    <!-- 📊 Detection Result Section -->
+    <section class="result-section">
+        <h2>Detection Result</h2>
+        <div id="result-box">
+            <p id="result-text">Upload an image to check.</p>
+            <span id="confidence-score"></span>
+        </div>
+    </section>
+
+    <!-- 🔎 How It Works -->
+    <section id="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <h3>1. Upload an Image</h3>
+                <p>Choose an image that you suspect might be a deepfake.</p>
+            </div>
+            <div class="step">
+                <h3>2. AI Analysis</h3>
+                <p>Our AI model scans the image for deepfake traces.</p>
+            </div>
+            <div class="step">
+                <h3>3. Get the Result</h3>
+                <p>We show a confidence score to help you decide if the image is real or fake.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ℹ️ About Section -->
+    <section id="about">
+        <h2>About Deepfake Detection</h2>
+        <p>FakeShield is an advanced AI-powered deepfake detection tool designed to combat the growing threat of digitally manipulated images by providing fast, accurate, and reliable verification. Using cutting-edge deep learning models, FakeShield analyzes images to detect AI-generated manipulations, ensuring authenticity and preventing misinformation, fraud, and identity theft. With a user-friendly interface, robust security measures, and real-time processing, FakeShield empowers journalists, businesses, social media users, and forensic experts to verify images effortlessly. Our mission is to create a safer digital space by leveraging artificial intelligence to preserve truth and transparency. As deepfake technology evolves, FakeShield continues to innovate, aiming to expand into video detection, social media integration, and mobile accessibility, making it the ultimate solution for combating digital forgeries.</p>
+    </section>
+
+    <!-- 📩 Footer -->
+    <footer>
+        <p>&copy; 2025 DeepFake Detector | Built for Awareness</p>
+        <ul class="social-links">
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">GitHub</a></li>
+        </ul>
+    </footer>
+
+    <!-- 🔒 Sign In Modal -->
+    <div id="signInModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeSignIn">&times;</span>
+            <h2>Sign In</h2>
+            <input type="text" placeholder="Enter your name">
+            <input type="text" placeholder="Enter your email">
+            <input type="password" placeholder="Enter your password">
+            <button>Sign In</button>
+        </div>
+    </div>
+
+    <!-- 🔒 Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeLogin">&times;</span>
+            <h2>Login</h2>
+            <input type="text" placeholder="Enter your email">
+            <input type="password" placeholder="Enter your password">
+            <button>Login</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

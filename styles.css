@@ -1,0 +1,339 @@
+/* 🌙 Dark Theme + Professional Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+/* 📌 Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #1a1a1a;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #03dac6;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #03dac6;
+}
+
+.detect-now-btn {
+    background: #03dac6;
+    color: #121212;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.detect-now-btn:hover {
+    background: #02c1a6;
+}
+
+/* 🎯 Hero Section */
+header {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 38px;
+    color: #fff;
+}
+
+header p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #b3b3b3;
+}
+
+.upload-btn {
+    background: #6200ea;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.upload-btn:hover {
+    background: #4a00c4;
+}
+
+/* 📤 Upload Section */
+.upload-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.upload-box {
+    background: #1e1e1e;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    width: 40%;
+}
+
+.upload-area {
+    display: block;
+    background: #2a2a2a;
+    border: 2px dashed #03dac6;
+    padding: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.image-preview {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+    display: none;
+    border-radius: 8px;
+}
+
+.detect-btn {
+    margin-top: 20px;
+    background: #ff0266;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.detect-btn:hover {
+    background: #d40052;
+}
+
+/* 📊 Result Section */
+.result-section {
+    margin-top: 40px;
+    padding: 20px;
+}
+
+#result-box {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+#result-text {
+    font-size: 20px;
+}
+
+#confidence-score {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 🔎 How It Works */
+#how-it-works {
+    margin-top: 60px;
+    padding: 40px;
+    background: #181818;
+    border-radius: 10px;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.step {
+    width: 30%;
+    padding: 20px;
+    background: #252525;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.step h3 {
+    color: #03dac6;
+}
+
+/* ℹ️ About Section */
+#about {
+    padding: 40px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* 📩 Footer */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background: #121212;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-links li {
+    margin: 0 15px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #03dac6;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    color: #02c1a6;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin: 5px 0;
+    }
+
+    .upload-box {
+        width: 80%;
+    }
+
+    .steps {
+        flex-direction: column;
+    }
+
+    .step {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #121212;
+    color: white;
+}
+
+/* Buttons */
+.auth-buttons button {
+    margin: 0 10px;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#signInBtn {
+    background: #03dac6;
+    color: black;
+}
+
+#loginBtn {
+    background: #ff0266;
+    color: white;
+}
+
+.auth-buttons button:hover {
+    opacity: 0.8;
+}
+
+/* Pop-up Modal */
+.modal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+.modal input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: #333;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.modal button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background: #03dac6;
+    color: black;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
