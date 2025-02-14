@@ -108,3 +108,22 @@ document.getElementById("imageUpload").addEventListener("change", function (even
         reader.readAsDataURL(file); // Read file as a data URL
     }
 });
+
+
+document.getElementById("imageUpload").addEventListener("change", function (event) {
+    const file = event.target.files[0]; // Get uploaded file
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            const uploadArea = document.querySelector(".upload-area");
+            uploadArea.innerHTML = ""; // Remove text inside the box
+
+            const img = document.createElement("img");
+            img.src = e.target.result;
+            img.classList.add("image-preview"); // Add preview class
+            uploadArea.appendChild(img); // Append image inside upload box
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
