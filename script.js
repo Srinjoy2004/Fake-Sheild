@@ -54,16 +54,24 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeSignIn = document.getElementById("closeSignIn");
     const closeLogin = document.getElementById("closeLogin");
 
-    // Open Sign-In Modal & Close Login Modal (if open)
+    // Toggle Sign-In Modal
     signInBtn.addEventListener("click", () => {
-        signInModal.style.display = "block";
-        loginModal.style.display = "none"; // Close login modal if open
+        if (signInModal.style.display === "block") {
+            signInModal.style.display = "none"; // Hide if already open
+        } else {
+            signInModal.style.display = "block";
+            loginModal.style.display = "none"; // Close login modal if open
+        }
     });
 
-    // Open Login Modal & Close Sign-In Modal (if open)
+    // Toggle Login Modal
     loginBtn.addEventListener("click", () => {
-        loginModal.style.display = "block";
-        signInModal.style.display = "none"; // Close sign-in modal if open
+        if (loginModal.style.display === "block") {
+            loginModal.style.display = "none"; // Hide if already open
+        } else {
+            loginModal.style.display = "block";
+            signInModal.style.display = "none"; // Close sign-in modal if open
+        }
     });
 
     // Close Sign-In Modal
