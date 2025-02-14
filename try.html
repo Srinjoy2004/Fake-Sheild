@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Counter Banner</title>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+        background-color: #2f54eb;
+        color: white;
+        padding: 60px 20px;
+        border-radius: 10px;
+        flex-wrap: wrap;
+    ">
+        <div style="text-align: center; width: 200px;">
+            <i class="fas fa-users" style="font-size: 50px; margin-bottom: 10px;"></i>
+            <h2 class="counter" data-target="1000" style="font-size: 45px; font-weight: bold; margin: 10px 0;"></h2>
+            <p style="font-size: 18px; opacity: 0.8;">Happy Clients</p>
+        </div>
+        <div style="text-align: center; width: 200px;">
+            <i class="fas fa-check" style="font-size: 50px; margin-bottom: 10px;"></i>
+            <h2 class="counter" data-target="15000" style="font-size: 45px; font-weight: bold; margin: 10px 0;"></h2>
+            <p style="font-size: 18px; opacity: 0.8;">Deepfakes Detected</p>
+        </div>
+        <div style="text-align: center; width: 200px;">
+            <i class="fas fa-user-cog" style="font-size: 50px; margin-bottom: 10px;"></i>
+            <h2 class="counter" data-target="10" style="font-size: 45px; font-weight: bold; margin: 10px 0;"></h2>
+            <p style="font-size: 18px; opacity: 0.8;">Dedicated Staff</p>
+        </div>
+        <div style="text-align: center; width: 200px;">
+            <i class="fas fa-award" style="font-size: 50px; margin-bottom: 10px;"></i>
+            <h2 class="counter" data-target="8" style="font-size: 45px; font-weight: bold; margin: 10px 0;"></h2>
+            <p style="font-size: 18px; opacity: 0.8;">Businesses</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const counters = document.querySelectorAll(".counter");
+
+            const startCounting = () => {
+                counters.forEach(counter => {
+                    let target = +counter.getAttribute("data-target");
+                    let count = 0;
+                    let speed = target / 100;
+
+                    let updateCounter = () => {
+                        if (count < target) {
+                            count += speed;
+                            counter.innerText = Math.ceil(count);
+                            setTimeout(updateCounter, 20);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+
+                    updateCounter();
+                });
+            };
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        startCounting();
+                        observer.disconnect();
+                    }
+                });
+            });
+
+            observer.observe(document.querySelector("div"));
+        });
+    </script>
+
+</body>
+</html>
