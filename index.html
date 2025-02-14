@@ -56,22 +56,25 @@
     padding: 60px 20px; 
     background-color: #121212;
 ">
-    <h2 style="font-size: 36px; margin-bottom: 30px; color: #333;">How It Works</h2>
+    <h2 style="font-size: 36px; margin-bottom: 30px; color: white;">How It Works</h2>
+    
+    <!-- Parent container for steps -->
     <div class="steps" style="
-        display: flex; 
-        justify-content: space-evenly; 
-        gap: 20px; 
-        flex-wrap: wrap;
-        max-width: 900px; 
+        display: flex;  /* Arrange boxes in a row */
+        justify-content: space-between;  /* Ensures equal spacing between boxes */
+        gap: 20px;  /* Adds space between the boxes */
+        max-width: 90%;  /* Ensures the section spans almost full width */
         margin: auto;
     ">
+        <!-- Step 1 -->
         <div class="step" style="
-            width: 280px; 
+            flex: 1;  /* Ensures equal width for all boxes */
             padding: 20px; 
             background-color: white; 
             border-radius: 10px; 
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
             transition: all 0.3s ease-in-out;
+            text-align: center;
         "
         onmouseover="this.style.backgroundColor='black'; this.style.color='white'; this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 12px rgba(0, 0, 255, 0.5)';" 
         onmouseout="this.style.backgroundColor='white'; this.style.color='black'; this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
@@ -79,13 +82,16 @@
             <p style="font-size: 16px; color: inherit;">Choose an image that you suspect might be a deepfake.</p>
         </div>
         
+        <!-- Step 2 (Middle box) -->
         <div class="step" style="
-            width: 280px; 
+            flex: 1;  /* Ensures equal width for all boxes */
             padding: 20px; 
             background-color: white; 
             border-radius: 10px; 
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
             transition: all 0.3s ease-in-out;
+            text-align: center;
+            margin: 0 20px;  /* Adds margin on both sides for spacing */
         "
         onmouseover="this.style.backgroundColor='black'; this.style.color='white'; this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 12px rgba(0, 0, 255, 0.5)';" 
         onmouseout="this.style.backgroundColor='white'; this.style.color='black'; this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
@@ -93,13 +99,15 @@
             <p style="font-size: 16px; color: inherit;">Our AI model scans the image for deepfake traces.</p>
         </div>
         
+        <!-- Step 3 -->
         <div class="step" style="
-            width: 280px; 
+            flex: 1;  /* Ensures equal width for all boxes */
             padding: 20px; 
             background-color: white; 
             border-radius: 10px; 
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
             transition: all 0.3s ease-in-out;
+            text-align: center;
         "
         onmouseover="this.style.backgroundColor='black'; this.style.color='white'; this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 12px rgba(0, 0, 255, 0.5)';" 
         onmouseout="this.style.backgroundColor='white'; this.style.color='black'; this.style.transform='scale(1)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';">
