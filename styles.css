@@ -337,3 +337,11 @@ header {
     cursor: pointer;
     color: white;
 }
+
+
+.image-preview {
+    display: none;
+    max-width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
+}
